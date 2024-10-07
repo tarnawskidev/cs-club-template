@@ -3,20 +3,20 @@
     mode, and change the color palette of your site accordingly. 
 */ 
 
+let lightdark = 1;
+
 //this function checks the users dark mode settings and modifies site styles accordingly
 function setDarkMode() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches) {
-
-        /*
+    /*
             We can grab the HTML elements using querySelector, and then store 
             them in variables for easy access. 
-        */
+     */
 
         let myHeader = document.querySelector("header");
         let myBody = document.querySelector("body");
         let myFooter = document.querySelector("footer");
-        
-        console.log(myHeader);
+
+    if (lightdark == 1) {
 
         /*
             We can then call the variables to modify the objects stored within those
@@ -35,7 +35,19 @@ function setDarkMode() {
         myFooter.style.backgroundColor = "#edad37";
         myFooter.style.color ="#e2e1e6";
     }
+    else {
+        myHeader.style.backgroundColor = "#3275a8";
+        myHeader.style.color = "#eeeeee";
+    }
+
+    lightdark *= -1;
 }
 
 //call the setDarkMode function
-setDarkMode();
+//setDarkMode();
+ const button = document.getElementById("lightdarkselect")
+
+ button.addEventListener("click", setDarkMode)
+
+
+//window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setDarkMode());
