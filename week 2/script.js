@@ -33,21 +33,20 @@ function setDarkMode() {
 
         //change footer styles
         myFooter.style.backgroundColor = "#edad37";
-        myFooter.style.color ="#e2e1e6";
+        myFooter.style.color ="eeeeee";
     }
     else {
         myHeader.style.backgroundColor = "#3275a8";
-        myHeader.style.color = "#eeeeee";
+        myHeader.style.color = "#000000";
+
+        myBody.style.backgroundColor = "#eeeeee";
+        myBody.style.color = "#000000";
     }
 
     lightdark *= -1;
 }
 
 //call the setDarkMode function
-//setDarkMode();
  const button = document.getElementById("lightdarkselect")
 
  button.addEventListener("click", setDarkMode)
-
-
-//window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setDarkMode());
